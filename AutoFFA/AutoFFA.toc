@@ -2,6 +2,6 @@
 ## Title: AutoFFA
 ## Author: Combovercarl
 ## Notes: Automatically change to free for all loot when you form a group.
-## Version: 1.0-1.14+
+## Version: 1.1-1.14+1.12
 
 AutoFFA.lua
