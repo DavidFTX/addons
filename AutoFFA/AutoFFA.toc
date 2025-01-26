@@ -1,0 +1,7 @@
+## Interface: 11402
+## Title: AutoFFA
+## Author: Combovercarl
+## Notes: Automatically change to free for all loot when you form a group.
+## Version: 1.0-1.14+
+
+AutoFFA.lua
