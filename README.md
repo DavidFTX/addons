@@ -10,8 +10,9 @@ Works with 1.14 and 1.12.
 Changes the color of tank raid frames (max level only).\
 Also works if you enable the option to use raid frames in a party.\
 Works with 1.14.
+
+![TankRecolor](TankRecolor/screenshot.jpg?raw=true)
+
 > [!NOTE]
 > Raid should work without VIP, but party most likely won't.\
 > I'll update this in the future for non-VIP.
-
-![TankRecolor](TankRecolor/screenshot.jpg?raw=true)
