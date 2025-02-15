@@ -1,28 +1,28 @@
 local version, build, date, tocversion = GetBuildInfo()
 local AutoFFA = CreateFrame("Frame")
-local timerEnd = 0
 local is112 = string.find(version, "^1.12")
 
 if (is112) then
-	--[[
-	The 1.12 API is stupid
-		
-	SetLootMethod triggers PARTY_MEMBERS_CHANGED which creates an infinite loop.
-	This also makes it so you can't ever change the loot type manually.
+
+	local timerEnd = 0
+	local isNewParty = true
 	
-	The seemingly logical workaround of using the PARTY_LOOT_METHOD_CHANGED event
-	also fails because changing group members also triggers this event for some
-	stupid reason.
-	
-	If someone really wants to extend this functionality in 1.12, you could just
-	manage the loot type within the addon.
-	
-	]]
-	--1.12
 	AutoFFA:RegisterEvent("PARTY_MEMBERS_CHANGED")
 	AutoFFA:SetScript("OnEvent", function()
 		if (event == "PARTY_MEMBERS_CHANGED") then
-			if (ignorePartyEvent == false) then
+		
+			local numParty = GetNumPartyMembers()
+			local numRaid = GetNumRaidMembers()
+			
+			-- Record if we leave group.
+			if (numParty == 0 and numRaid == 0) then
+				isNewParty = true;
+			end
+			
+			if (isNewParty and (numParty > 0 or numRaid > 0)) then
+				isNewParty = false;
+				
+				-- It takes a few seconds for the group to form after trigger.
 				timerEnd = GetTime() + 2;
 				this:SetScript("OnUpdate", function()
 					if (timerEnd < GetTime()) then
