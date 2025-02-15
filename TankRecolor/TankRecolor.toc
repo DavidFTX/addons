@@ -1,0 +1,7 @@
+## Interface: 11402
+## Title: Tank Recolor
+## Author: Combovercarl
+## Notes: Changes the color of tank raid frames (max level only).
+## Version: 1.0-1.14
+
+TankRecolor.lua
