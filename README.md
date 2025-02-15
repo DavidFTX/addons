@@ -2,14 +2,13 @@
 
 Mainly intended for Solocraft.
 
-### AutoFFA
+## AutoFFA $${\color{green}1.14}$$ $${\color{green}1.12}$$
 Automatically change to free for all loot when you form a group.\
-Works with 1.14 and 1.12.
+&nbsp;
 
-### TankRecolor
+## TankRecolor $${\color{green}1.14}$$
 Changes the color of tank raid frames (max level only).\
-Also works if you enable the option to use raid frames in a party.\
-Works with 1.14.
+Also works if you enable the option to use raid frames in a party.
 
 ![TankRecolor](TankRecolor/screenshot.jpg?raw=true)
 
